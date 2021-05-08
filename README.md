@@ -1,6 +1,6 @@
 # 图书馆管理系统(python3，PyQt5，MySQL)
 
- ### 实现以下功能:
+### 实现以下功能:
 - 用户注册、登录、修改密码、用户管理
 
 - 存储图书信息、采购和淘汰情况、租借情况 
@@ -13,7 +13,7 @@
 
 ## 1.配置项目
 
-1. `LibraryManage.sql`为数据库文件,新建数据库后运行此数据库文件。
+1. `LibraryManage.sql`为数据库文件
 
 2. 打开`db.py`进行对数据配置
 
@@ -30,16 +30,14 @@
 
 1. 安装依赖包
 
-   ```CMD
-   pip install -r requirements.txt
-   ````
+   `pip install -r requirements.txt`
 
 2. 运行`MainWindow.py`启动项目
 
 ## 3.打包项目
 
-1.生成可执行`exe`文件
- ```CMD
-pyinstaller -F -w --clean --icon=./images/MainWindow_1.ico MainWindow.py
- ```
+1. 生成可执行`exe`文件
+
+   `pyinstaller -F -w --clean --icon=./images/MainWindow_1.ico MainWindow.py`
+
 2. 生成的文件位于项目文件夹`dist`下。
