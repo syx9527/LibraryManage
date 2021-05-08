@@ -41,3 +41,5 @@
    `pyinstaller -F -w --clean --icon=./images/MainWindow_1.ico MainWindow.py`
 
 2. 生成的文件位于项目文件夹`dist`下。
+
+#### 项目地址https://github.com/syx9527/LibraryManage
