@@ -13,7 +13,7 @@
 
 ## 1.配置项目
 
-1. `LibraryManage.sql`为数据库文件
+1. `LibraryManage.sql`为数据库文件,新建数据库后运行此数据库文件。
 
 2. 打开`db.py`进行对数据配置
 
