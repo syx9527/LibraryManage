@@ -38,8 +38,9 @@
 
 ## 3.打包项目
 
-1. ```CMD
- pyinstaller -F -w --clean --icon=./images/MainWindow_1.ico MainWindow.py
+1.CMD运行
+ ```CMD
+pyinstaller -F -w --clean --icon=./images/MainWindow_1.ico MainWindow.py
  ```
  生成可执行`exe`文件
 
