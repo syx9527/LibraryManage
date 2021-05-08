@@ -38,10 +38,10 @@
 
 ## 3.打包项目
 
-1.CMD运行
+1.生成可执行`exe`文件
  ```CMD
 pyinstaller -F -w --clean --icon=./images/MainWindow_1.ico MainWindow.py
  ```
- 生成可执行`exe`文件
+ 
 
 2. 生成的文件位于项目文件夹`dist`下。
