@@ -30,7 +30,9 @@
 
 1. 安装依赖包
 
-   `pip install -r requirements.txt`
+   ```CMD
+   pip install -r requirements.txt
+   ````
 
 2. 运行`MainWindow.py`启动项目
 
