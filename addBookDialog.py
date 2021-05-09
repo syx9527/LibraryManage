@@ -7,7 +7,6 @@ import time
 
 import db
 
-
 class addBookDialog(QDialog):
     add_book_success_signal = pyqtSignal()
 
