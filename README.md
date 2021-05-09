@@ -42,4 +42,4 @@
 
 2. 生成的文件位于项目文件夹`dist`下。
 
-#### 项目地址https://github.com/syx9527/LibraryManage
+#### 项目已同步至github<a href='https://github.com/syx9527/LibraryManage'>图书馆管理系统</a>
