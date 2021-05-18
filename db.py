@@ -3,8 +3,8 @@ import traceback
 
 host = "127.0.0.1"
 user = "root"
-password = "****"
-database = "****"  # 数据库名字
+password = "123456"
+database = "ll"  # 数据库名字
 
 
 def get_conn():

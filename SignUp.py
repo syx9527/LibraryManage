@@ -84,10 +84,12 @@ class SignUpWidget(QWidget):
         self.signUpbutton.setFixedHeight(30)
         self.signUpbutton.setFont(font)
         self.formlayout.addRow("", self.signUpbutton)
+
         widget = QWidget()
         widget.setLayout(self.formlayout)
         widget.setFixedHeight(250)
         widget.setFixedWidth(300)
+
         self.Hlayout = QHBoxLayout()
         self.Hlayout.addWidget(widget, Qt.AlignCenter)
         widget = QWidget()
@@ -104,6 +106,7 @@ class SignUpWidget(QWidget):
         pValidator.setRegExp(reg)
         self.passwordLineEdit.setValidator(pValidator)
         self.passwordConfirmLineEdit.setValidator(pValidator)
+
         self.signUpbutton.clicked.connect(self.SignUp)
         self.studentIdLineEdit.returnPressed.connect(self.SignUp)
         self.studentNameLineEdit.returnPressed.connect(self.SignUp)
@@ -148,7 +151,7 @@ class SignUpWidget(QWidget):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setWindowIcon(QIcon("./images/MainWindow_1.ico"))
-    app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
+    # app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
     mainMindow = SignUpWidget()
     mainMindow.show()
     sys.exit(app.exec_())
