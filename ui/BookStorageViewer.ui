@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>欢迎使用图书馆管理系统</string>
   </property>
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>

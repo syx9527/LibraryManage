@@ -55,10 +55,11 @@ class changePasswordDialog(QDialog):
         self.confirmPasswordLabel.setFont(font)
 
         font.setPixelSize(16)
-        self.studentIdEdit.setFont(font)
+
         self.changePasswordButton.setFont(font)
         # self.studentNameEdit.setFont(font)
         font.setPixelSize(10)
+        self.studentIdEdit.setFont(font)
         self.oldPasswordEdit.setFont(font)
         self.passwordEdit.setFont(font)
         self.confirmPasswordEdit.setFont(font)
@@ -67,7 +68,7 @@ class changePasswordDialog(QDialog):
         self.layout.setVerticalSpacing(10)
 
         # 设置长度
-        self.studentIdEdit.setMaxLength(10)
+        self.studentIdEdit.setMaxLength(12)
         self.oldPasswordEdit.setMaxLength(16)
         self.passwordEdit.setMaxLength(16)
         self.confirmPasswordEdit.setMaxLength(16)

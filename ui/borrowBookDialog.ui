@@ -11,306 +11,302 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>借阅书籍</string>
   </property>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>291</width>
-     <height>383</height>
-    </rect>
-   </property>
-   <layout class="QFormLayout" name="formLayout">
-    <property name="fieldGrowthPolicy">
-     <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
-    </property>
-    <property name="horizontalSpacing">
-     <number>0</number>
-    </property>
-    <property name="verticalSpacing">
-     <number>10</number>
-    </property>
-    <item row="4" column="0">
-     <widget class="QLabel" name="bookNameLabel">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="1">
+    <widget class="QLabel" name="titlelabel">
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="text">
+      <string>借阅书籍</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="margin">
+      <number>8</number>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="borrowStudentLabel">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>借 阅 人:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="bookNameLabel">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>书    名:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="bookNameEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="maxLength">
+      <number>10</number>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="bookIdLabel">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>书    号:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="bookIdEdit">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="maxLength">
+      <number>6</number>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="authNameLabel">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>作    者:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLineEdit" name="authNameEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="maxLength">
+      <number>10</number>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="categoryLabel">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>分    类:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QComboBox" name="categoryComboBox">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <item>
       <property name="text">
-       <string>书    名:</string>
+       <string>哲学</string>
       </property>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="QLabel" name="bookIdLabel">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
+     </item>
+     <item>
       <property name="text">
-       <string>书    号:</string>
+       <string>社会科学</string>
       </property>
-     </widget>
-    </item>
-    <item row="6" column="0">
-     <widget class="QLabel" name="authNameLabel">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
+     </item>
+     <item>
       <property name="text">
-       <string>作    者:</string>
+       <string>政治</string>
       </property>
-     </widget>
-    </item>
-    <item row="7" column="0">
-     <widget class="QLabel" name="categoryLabel">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
+     </item>
+     <item>
       <property name="text">
-       <string>分    类:</string>
+       <string>法律</string>
       </property>
-     </widget>
-    </item>
-    <item row="8" column="1">
-     <widget class="QLineEdit" name="publisherEdit">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="maxLength">
-       <number>10</number>
-      </property>
-     </widget>
-    </item>
-    <item row="11" column="1">
-     <widget class="QPushButton" name="borrowBookButton">
-      <property name="maximumSize">
-       <size>
-        <width>140</width>
-        <height>32</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
+     </item>
+     <item>
       <property name="text">
-       <string>确认借阅</string>
+       <string>军事</string>
       </property>
-     </widget>
-    </item>
-    <item row="9" column="0">
-     <widget class="QLabel" name="publishDateLabel">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
+     </item>
+     <item>
       <property name="text">
-       <string>出版日期:</string>
+       <string>经济</string>
       </property>
-     </widget>
-    </item>
-    <item row="9" column="1">
-     <widget class="QDateEdit" name="publishTime">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QLineEdit" name="bookNameEdit">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="maxLength">
-       <number>10</number>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="1">
-     <widget class="QComboBox" name="categoryComboBox">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <item>
-       <property name="text">
-        <string>哲学</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>社会科学</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>政治</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>法律</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>军事</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>经济</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>文化</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>教育</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>体育</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>语言文字</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>艺术</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>历史</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>地理</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>天文学</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>生物学</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>医学卫生</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>农业</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QLineEdit" name="bookIdEdit">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="maxLength">
-       <number>6</number>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="1">
-     <widget class="QLineEdit" name="authNameEdit">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="maxLength">
-       <number>10</number>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="0">
-     <widget class="QLabel" name="publisherLabel">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
+     </item>
+     <item>
       <property name="text">
-       <string>出 版 社:</string>
+       <string>文化</string>
       </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QLabel" name="titlelabel">
-      <property name="font">
-       <font>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LeftToRight</enum>
-      </property>
-      <property name="lineWidth">
-       <number>1</number>
-      </property>
+     </item>
+     <item>
       <property name="text">
-       <string>借阅书籍</string>
+       <string>教育</string>
       </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <property name="margin">
-       <number>8</number>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="borrowStudentLabel">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
+     </item>
+     <item>
       <property name="text">
-       <string>借 阅 人:</string>
+       <string>体育</string>
       </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
+     </item>
+     <item>
+      <property name="text">
+       <string>语言文字</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>艺术</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>历史</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>地理</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>天文学</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>生物学</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>医学卫生</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>农业</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="publisherLabel">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>出 版 社:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QLineEdit" name="publisherEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="maxLength">
+      <number>10</number>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="publishDateLabel">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>出版日期:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QDateEdit" name="publishTime">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QPushButton" name="borrowBookButton">
+     <property name="maximumSize">
+      <size>
+       <width>140</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>确认借阅</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>StudentHome</class>
+ <widget class="QWidget" name="StudentHome">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>欢迎使用图书馆管理系统</string>
   </property>
   <widget class="QWidget" name="gridWidget" native="true">
    <property name="geometry">
@@ -109,7 +109,7 @@
      <height>582</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="BookStorageViewer">
     <item>
      <layout class="QHBoxLayout" name="Hlayout1_2">
       <item>

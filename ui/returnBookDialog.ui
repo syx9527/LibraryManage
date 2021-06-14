@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>addBookDialog</class>
- <widget class="QDialog" name="addBookDialog">
+ <class>returnBookDialog</class>
+ <widget class="QDialog" name="returnBookDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>添加书籍</string>
+   <string>归还书籍</string>
   </property>
   <layout class="QFormLayout" name="formLayout">
    <item row="0" column="1">
@@ -28,7 +28,7 @@
       <number>1</number>
      </property>
      <property name="text">
-      <string>  添加书籍</string>
+      <string>归还书籍</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -39,6 +39,18 @@
     </widget>
    </item>
    <item row="1" column="0">
+    <widget class="QLabel" name="returnStudentLabel">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>还 书 人:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
     <widget class="QLabel" name="bookNameLabel">
      <property name="font">
       <font>
@@ -50,19 +62,25 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="1">
+   <item row="2" column="1">
     <widget class="QLineEdit" name="bookNameEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="font">
       <font>
        <pointsize>14</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#363636</string>
      </property>
      <property name="maxLength">
       <number>10</number>
      </property>
     </widget>
    </item>
-   <item row="2" column="0">
+   <item row="3" column="0">
     <widget class="QLabel" name="bookIdLabel">
      <property name="font">
       <font>
@@ -74,7 +92,7 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="1">
+   <item row="3" column="1">
     <widget class="QLineEdit" name="bookIdEdit">
      <property name="font">
       <font>
@@ -86,7 +104,7 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="0">
+   <item row="4" column="0">
     <widget class="QLabel" name="authNameLabel">
      <property name="font">
       <font>
@@ -98,19 +116,25 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="1">
+   <item row="4" column="1">
     <widget class="QLineEdit" name="authNameEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="font">
       <font>
        <pointsize>14</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#363636</string>
      </property>
      <property name="maxLength">
       <number>10</number>
      </property>
     </widget>
    </item>
-   <item row="4" column="0">
+   <item row="5" column="0">
     <widget class="QLabel" name="categoryLabel">
      <property name="font">
       <font>
@@ -122,12 +146,18 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="1">
+   <item row="5" column="1">
     <widget class="QComboBox" name="categoryComboBox">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="font">
       <font>
        <pointsize>14</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#363636</string>
      </property>
      <item>
       <property name="text">
@@ -216,7 +246,7 @@
      </item>
     </widget>
    </item>
-   <item row="5" column="0">
+   <item row="6" column="0">
     <widget class="QLabel" name="publisherLabel">
      <property name="font">
       <font>
@@ -228,19 +258,25 @@
      </property>
     </widget>
    </item>
-   <item row="5" column="1">
+   <item row="6" column="1">
     <widget class="QLineEdit" name="publisherEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="font">
       <font>
        <pointsize>14</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#363636</string>
      </property>
      <property name="maxLength">
       <number>10</number>
      </property>
     </widget>
    </item>
-   <item row="6" column="0">
+   <item row="7" column="0">
     <widget class="QLabel" name="publishDateLabel">
      <property name="font">
       <font>
@@ -252,41 +288,23 @@
      </property>
     </widget>
    </item>
-   <item row="6" column="1">
-    <widget class="QDateEdit" name="publishTime">
-     <property name="font">
-      <font>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-    </widget>
-   </item>
-   <item row="7" column="0">
-    <widget class="QLabel" name="addNumLabel">
-     <property name="font">
-      <font>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>数    量:</string>
-     </property>
-    </widget>
-   </item>
    <item row="7" column="1">
-    <widget class="QLineEdit" name="addNumEdit">
+    <widget class="QDateEdit" name="publishTime">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="font">
       <font>
        <pointsize>14</pointsize>
       </font>
      </property>
-     <property name="maxLength">
-      <number>12</number>
+     <property name="styleSheet">
+      <string notr="true">#363636</string>
      </property>
     </widget>
    </item>
    <item row="8" column="1">
-    <widget class="QPushButton" name="addBookButton">
+    <widget class="QPushButton" name="returnBookButton">
      <property name="maximumSize">
       <size>
        <width>140</width>
@@ -299,7 +317,7 @@
       </font>
      </property>
      <property name="text">
-      <string>添 加</string>
+      <string>确认归还</string>
      </property>
     </widget>
    </item>

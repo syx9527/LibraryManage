@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>addBookDialog</class>
- <widget class="QDialog" name="addBookDialog">
+ <class>dropBookDialog</class>
+ <widget class="QDialog" name="dropBookDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>300</width>
-    <height>400</height>
+    <width>329</width>
+    <height>419</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>添加书籍</string>
+   <string>删除书籍</string>
   </property>
   <layout class="QFormLayout" name="formLayout">
    <item row="0" column="1">
@@ -28,7 +28,7 @@
       <number>1</number>
      </property>
      <property name="text">
-      <string>  添加书籍</string>
+      <string>淘汰书籍</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -52,10 +52,16 @@
    </item>
    <item row="1" column="1">
     <widget class="QLineEdit" name="bookNameEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="font">
       <font>
        <pointsize>14</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#363636</string>
      </property>
      <property name="maxLength">
       <number>10</number>
@@ -100,10 +106,16 @@
    </item>
    <item row="3" column="1">
     <widget class="QLineEdit" name="authNameEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="font">
       <font>
        <pointsize>14</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#363636</string>
      </property>
      <property name="maxLength">
       <number>10</number>
@@ -124,10 +136,16 @@
    </item>
    <item row="4" column="1">
     <widget class="QComboBox" name="categoryComboBox">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="font">
       <font>
        <pointsize>14</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#363636</string>
      </property>
      <item>
       <property name="text">
@@ -230,10 +248,16 @@
    </item>
    <item row="5" column="1">
     <widget class="QLineEdit" name="publisherEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="font">
       <font>
        <pointsize>14</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#363636</string>
      </property>
      <property name="maxLength">
       <number>10</number>
@@ -254,15 +278,21 @@
    </item>
    <item row="6" column="1">
     <widget class="QDateEdit" name="publishTime">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="font">
       <font>
        <pointsize>14</pointsize>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">#363636</string>
+     </property>
     </widget>
    </item>
    <item row="7" column="0">
-    <widget class="QLabel" name="addNumLabel">
+    <widget class="QLabel" name="dropNumLabel">
      <property name="font">
       <font>
        <pointsize>14</pointsize>
@@ -274,7 +304,7 @@
     </widget>
    </item>
    <item row="7" column="1">
-    <widget class="QLineEdit" name="addNumEdit">
+    <widget class="QLineEdit" name="dropNumEdit">
      <property name="font">
       <font>
        <pointsize>14</pointsize>
@@ -286,7 +316,7 @@
     </widget>
    </item>
    <item row="8" column="1">
-    <widget class="QPushButton" name="addBookButton">
+    <widget class="QPushButton" name="dropBookButton">
      <property name="maximumSize">
       <size>
        <width>140</width>
@@ -299,7 +329,7 @@
       </font>
      </property>
      <property name="text">
-      <string>添 加</string>
+      <string>淘 汰</string>
      </property>
     </widget>
    </item>
