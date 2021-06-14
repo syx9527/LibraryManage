@@ -35,10 +35,12 @@ class AdminHome(QWidget):
         self.addBookButton.setFixedHeight(42)
         self.dropBookButton.setFixedWidth(100)
         self.dropBookButton.setFixedHeight(42)
+
         self.buttonlayout.addWidget(self.addBookButton)
         self.buttonlayout.addWidget(self.dropBookButton)
         self.buttonlayout.addWidget(self.userManageButton)
         self.layout.addLayout(self.buttonlayout)
+
         self.storageView = BookStorageViewer()
         self.layout.addWidget(self.storageView)
 

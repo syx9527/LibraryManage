@@ -46,6 +46,7 @@ class BorrowStatusViewer(QWidget):
 
         self.borrowedTableView.setModel(self.borrowedQueryModel)
         self.returnedTableView.setModel(self.returnedQueryModel)
+
         self.borrowedQuery()
 
         self.returnedQuery()

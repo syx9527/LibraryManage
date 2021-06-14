@@ -1,3 +1,12 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'UserManage.ui'
+#
+# Created by: PyQt5 UI code generator 5.12.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
@@ -10,11 +19,11 @@ import db
 
 
 class UserManage(QDialog):
+
     def __init__(self, parent=None):
         super(UserManage, self).__init__(parent)
         self.resize(280, 400)
-        self.layout = QVBoxLayout()
-        self.setLayout(self.layout)
+
         self.setWindowTitle("管理用户")
         # 用户数
         self.userCount = 0
@@ -22,16 +31,32 @@ class UserManage(QDialog):
         self.oldDeleteName = ""
         self.deleteId = ""
         self.deleteName = ""
-        self.setUpUI()
+        self.setupUi()
 
-    def setUpUI(self):
+    def setupUi(self):
+
+
         self.getResult()
 
-        # 表格设置
-        self.tableWidget = QTableWidget()
-        self.tableWidget.setRowCount(self.userCount)
+        # UserManage.setObjectName("UserManage")
+        # UserManage.resize(280, 418)
+        self.formLayout = QtWidgets.QFormLayout(self)
+        self.formLayout.setObjectName("formLayout")
+
+        self.tableWidget = QtWidgets.QTableWidget(self)
+        self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(2)
-        self.tableWidget.setHorizontalHeaderLabels(['学号', '姓名'])
+
+        self.tableWidget.setRowCount(self.userCount)
+        item = QtWidgets.QTableWidgetItem()
+        item.setText("学号")
+        self.tableWidget.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        item.setText("姓名")
+        self.tableWidget.setHorizontalHeaderItem(1, item)
+
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.tableWidget)
+
         # 不可编辑
         self.tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
         # 标题可拉伸
@@ -39,25 +64,35 @@ class UserManage(QDialog):
         # 整行选中
         self.tableWidget.setSelectionBehavior(QAbstractItemView.SelectRows)
 
-        self.layout.addWidget(self.tableWidget)
-
         self.setRows()
 
-        self.deleteUserButton = QPushButton("删 除 用 户")
-        hlayout = QHBoxLayout()
-        hlayout.addWidget(self.deleteUserButton, Qt.AlignHCenter)
-        self.widget = QWidget()
-        self.widget.setLayout(hlayout)
-        self.widget.setFixedHeight(48)
-        font = QFont()
-        font.setPixelSize(15)
-        self.deleteUserButton.setFixedHeight(36)
-        self.deleteUserButton.setFixedWidth(180)
-        self.deleteUserButton.setFont(font)
-        self.layout.addWidget(self.widget, Qt.AlignCenter)
+        self.widget = QtWidgets.QWidget(self)
+        self.widget.setMinimumSize(QtCore.QSize(0, 48))
+        self.widget.setObjectName("widget")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.hlayout = QtWidgets.QHBoxLayout()
+        self.hlayout.setObjectName("hlayout")
+        self.pushButton = QtWidgets.QPushButton(self.widget)
+        self.pushButton.setMaximumSize(QtCore.QSize(180, 36))
+        self.pushButton.setObjectName("pushButton")
+        self.hlayout.addWidget(self.pushButton)
+        self.horizontalLayout.addLayout(self.hlayout)
+
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.SpanningRole, self.widget)
+
+        self.retranslateUi()
+        QtCore.QMetaObject.connectSlotsByName(self)
         # 设置信号
-        self.deleteUserButton.clicked.connect(self.deleteUser)
+        self.pushButton.clicked.connect(self.deleteUser)
         self.tableWidget.itemClicked.connect(self.getStudentInfo)
+
+    def retranslateUi(self, ):
+        _translate = QtCore.QCoreApplication.translate
+        self.setWindowTitle(_translate("", "管理用户"))
+        item = self.tableWidget.horizontalHeaderItem(1)
+        item.setText(_translate("", "姓名", ))
+        self.pushButton.setText(_translate("", "删 除 用 户"))
 
     def getResult(self):
         sql = "SELECT StudentId,Name FROM User WHERE IsAdmin=0"
@@ -76,8 +111,8 @@ class UserManage(QDialog):
             StudentNameItem = QTableWidgetItem(self.query[i][1])
             StudentIdItem.setFont(font)
             StudentNameItem.setFont(font)
-            StudentIdItem.setTextAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
-            StudentNameItem.setTextAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
+            # StudentIdItem.setTextAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
+            # StudentNameItem.setTextAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
 
             self.tableWidget.setItem(i, 0, StudentIdItem)
             self.tableWidget.setItem(i, 1, StudentNameItem)
@@ -127,39 +162,8 @@ class UserManage(QDialog):
 
     def updateUI(self):
         self.getResult()
-        self.layout.removeWidget(self.widget)
-        self.layout.removeWidget(self.tableWidget)
-        sip.delete(self.widget)
-        sip.delete(self.tableWidget)
-        # 表格设置
-        self.tableWidget = QTableWidget()
         self.tableWidget.setRowCount(self.userCount)
-        self.tableWidget.setColumnCount(2)
-        self.tableWidget.setHorizontalHeaderLabels(['学号', '姓名'])
-        # 不可编辑
-        self.tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        # 标题可拉伸
-        self.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
-        # 整行选中
-        self.tableWidget.setSelectionBehavior(QAbstractItemView.SelectRows)
-
-        self.layout.addWidget(self.tableWidget)
         self.setRows()
-        self.deleteUserButton = QPushButton("删 除 用 户")
-        hlayout = QHBoxLayout()
-        hlayout.addWidget(self.deleteUserButton, Qt.AlignHCenter)
-        self.widget = QWidget()
-        self.widget.setLayout(hlayout)
-        self.widget.setFixedHeight(48)
-        font = QFont()
-        font.setPixelSize(15)
-        self.deleteUserButton.setFixedHeight(36)
-        self.deleteUserButton.setFixedWidth(180)
-        self.deleteUserButton.setFont(font)
-        self.layout.addWidget(self.widget, Qt.AlignCenter)
-        # 设置信号
-        self.deleteUserButton.clicked.connect(self.deleteUser)
-        self.tableWidget.itemClicked.connect(self.getStudentInfo)
 
 
 if __name__ == "__main__":

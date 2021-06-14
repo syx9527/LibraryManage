@@ -105,6 +105,7 @@ class borrowBookDialog(QDialog):
         # 设置间距
         self.titlelabel.setMargin(8)
         self.layout.setVerticalSpacing(10)
+
         self.borrowBookButton.clicked.connect(self.borrowButtonClicked)
         self.bookIdEdit.textChanged.connect(self.bookIdEditChanged)
         self.bookIdEdit.returnPressed.connect(self.borrowButtonClicked)

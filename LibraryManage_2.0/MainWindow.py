@@ -1,3 +1,12 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'Main.ui'
+#
+# Created by: PyQt5 UI code generator 5.12.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QIcon
@@ -16,8 +25,9 @@ class Main(QMainWindow):
         self.layout = QHBoxLayout()
         self.widget = SignInWidget()
         self.resize(1200, 600)
-        self.setWindowTitle("欢迎登陆图书馆管理系统")
+
         self.setCentralWidget(self.widget)
+
         bar = self.menuBar()
         self.Menu = bar.addMenu("菜单栏")
         self.signUpAction = QAction("注册", self)
@@ -30,13 +40,21 @@ class Main(QMainWindow):
         self.Menu.addAction(self.signInAction)
         self.Menu.addAction(self.quitSignInAction)
         self.Menu.addAction(self.quitAction)
-        self.signUpAction.setEnabled(True)
-        self.changePasswordAction.setEnabled(True)
-        self.signInAction.setEnabled(False)
-        self.quitSignInAction.setEnabled(False)
-        self.widget.is_admin_signal.connect(self.adminSignIn)
-        self.widget.is_student_signal[str].connect(self.studentSignIn)
-        self.Menu.triggered[QAction].connect(self.menuTriggered)
+
+        self.retranslateUi()
+        QtCore.QMetaObject.connectSlotsByName(self)
+
+
+    def retranslateUi(self):
+        _translate = QtCore.QCoreApplication.translate
+        self.setWindowTitle(_translate("MainWindow", "欢迎登陆图书馆管理系统"))
+        self.Menu.setTitle(_translate("MainWindow", "菜单栏"))
+        self.changePasswordAction.setText(_translate("MainWindow", "修改密码"))
+        self.signUpAction.setText(_translate("MainWindow", "注册"))
+        self.changePasswordAction.setText(_translate("MainWindow", "修改密码"))
+        self.signInAction.setText(_translate("MainWindow", "登录"))
+        self.quitSignInAction.setText(_translate("MainWindow", "退出登录"))
+        self.quitAction.setText(_translate("MainWindow", "退出"))
 
     def adminSignIn(self):
         sip.delete(self.widget)
@@ -57,8 +75,8 @@ class Main(QMainWindow):
         self.quitSignInAction.setEnabled(True)
 
     def menuTriggered(self, q):
-        if(q.text()=="修改密码"):
-            changePsdDialog=changePasswordDialog(self)
+        if (q.text() == "修改密码"):
+            changePsdDialog = changePasswordDialog(self)
             changePsdDialog.show()
             changePsdDialog.exec_()
         if (q.text() == "注册"):
