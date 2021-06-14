@@ -27,9 +27,9 @@ class borrowBookDialog(QDialog):
         self.setLayout(self.layout)
 
         # Label控件
+        self.titlelabel = QLabel("  借阅书籍")
         self.borrowStudentLabel = QLabel("借 阅 人:")
         self.borrowStudentIdLabel = QLabel(self.studentId)
-        self.titlelabel = QLabel("  借阅书籍")
         self.bookNameLabel = QLabel("书    名:")
         self.bookIdLabel = QLabel("书    号:")
         self.authNameLabel = QLabel("作    者:")
@@ -181,7 +181,7 @@ class borrowBookDialog(QDialog):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setWindowIcon(QIcon("./images/MainWindow_1.ico"))
-    app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
+    # app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
     mainMindow = borrowBookDialog("PB15000135")
     mainMindow.show()
     sys.exit(app.exec_())

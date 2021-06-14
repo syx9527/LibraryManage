@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="borrowedLabel">
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>未归还:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="borrowedTableView">
+     <row>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>书名</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>书号</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>作者</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>分类</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>出版社</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>出版时间</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>借出时间</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="returnedLabel">
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>已归还:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="returnedTableView">
+     <row>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>书名</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>书号</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>作者</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>分类</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>出版社</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>出版时间</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>借出时间</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>归还时间</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -138,7 +138,7 @@ class changePasswordDialog(QDialog):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setWindowIcon(QIcon("./images/MainWindow_1.ico"))
-    app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
+    # app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
     mainMindow = changePasswordDialog()
     mainMindow.show()
     sys.exit(app.exec_())

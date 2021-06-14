@@ -6,8 +6,8 @@ from addBookDialog import addBookDialog
 from dropBookDialog import dropBookDialog
 from BookStorageViewer import BookStorageViewer
 
-
 from UserManage import UserManage
+
 
 class AdminHome(QWidget):
     def __init__(self):
@@ -59,16 +59,16 @@ class AdminHome(QWidget):
         dropDialog.exec_()
 
     def userManage(self):
-        # UserDelete=UserManage(self)
-        # UserDelete.show()
-        # UserDelete.exec_()
+        UserDelete = UserManage(self)
+        UserDelete.show()
+        UserDelete.exec_()
         pass
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setWindowIcon(QIcon("./images/MainWindow_1.ico"))
-    app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
+    # app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
     mainMindow = AdminHome()
     mainMindow.show()
     sys.exit(app.exec_())
