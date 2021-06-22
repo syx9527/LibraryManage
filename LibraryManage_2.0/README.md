@@ -31,7 +31,7 @@
 
 ## 1.配置项目
 
-1. `LibraryManage.sql`为数据库文件
+1. `LibraryMana.sql`为数据库文件
 
 2. 打开`db.py`进行对数据配置
 
@@ -60,4 +60,4 @@
 
 2. 生成的文件位于项目文件夹`dist`下。
 
-## 2.0版本已同步至github<a href='https://github.com/syx9527/LibraryManage/tree/main/LibraryManage_2.0'>LibraryManage_2.0</a>
+## 项目已同步至github仓库<a href='https://github.com/syx9527/LibraryManage'>LibraryManage</a>

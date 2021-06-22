@@ -21,7 +21,7 @@ class returnBookDialog(QDialog):
 
     def __init__(self, StudentId, parent=None):
         super(returnBookDialog, self).__init__(parent)
-        self.studentId = StudentId
+        self.StudentId = StudentId
         self.setupUi()
 
     def setupUi(self):
@@ -171,12 +171,12 @@ class returnBookDialog(QDialog):
         self.bookIdEdit.textChanged.connect(self.bookIdEditChanged)
 
     def retranslateUi(self):
-        self.studentId
+
         _translate = QtCore.QCoreApplication.translate
         self.setWindowTitle(_translate("returnBookDialog", "归还书籍"))
         self.titlelabel.setText(_translate("returnBookDialog", "归还书籍"))
         self.returnStudentLabel.setText(_translate("returnBookDialog", "还 书 人:"))
-        self.returnStudentIdLabel.setText(_translate("returnBookDialog", self.studentId))
+        self.returnStudentIdLabel.setText(_translate("returnBookDialog", self.StudentId))
 
         self.bookNameLabel.setText(_translate("returnBookDialog", "书    名:"))
         self.bookIdLabel.setText(_translate("returnBookDialog", "书    号:"))

@@ -55,6 +55,11 @@ class AdminHome(QWidget):
         self.storageView = BookStorageViewer()
         self.layout.addWidget(self.storageView)
 
+        self.addBookButton.clicked.connect(self.addBookButtonClicked)
+        self.dropBookButton.clicked.connect(self.dropBookButtonClicked)
+        self.userManageButton.clicked.connect(self.userManage)
+
+
         self.retranslateUi()
         QtCore.QMetaObject.connectSlotsByName(self)
 
@@ -64,6 +69,26 @@ class AdminHome(QWidget):
         self.addBookButton.setText(_translate("AdminHome", "添加书籍"))
         self.dropBookButton.setText(_translate("AdminHome", "淘汰书籍"))
         self.userManageButton.setText(_translate("AdminHome", "用户管理"))
+
+
+    def addBookButtonClicked(self):
+        addDialog = addBookDialog(self)
+        addDialog.add_book_success_signal.connect(self.storageView.searchButtonClicked)
+        addDialog.show()
+        addDialog.exec_()
+
+    def dropBookButtonClicked(self):
+        dropDialog = dropBookDialog(self)
+        dropDialog.drop_book_successful_signal.connect(self.storageView.searchButtonClicked)
+        dropDialog.show()
+        dropDialog.exec_()
+
+    def userManage(self):
+        UserDelete = UserManage(self)
+        UserDelete.show()
+        UserDelete.exec_()
+        pass
+
 
 
 if __name__ == "__main__":

@@ -75,9 +75,9 @@ class BorrowStatusViewer(QWidget):
         self.returnedTableView.setObjectName("returnedTableView")
 
         # 不可编辑
-        self.borrowedTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.returnedTableView.setEditTriggers(QAbstractItemView.NoEditTriggers)
         # 标题可拉伸
-        self.borrowedTableView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        self.returnedTableView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
         self.returnedTableView.setColumnCount(8)
 

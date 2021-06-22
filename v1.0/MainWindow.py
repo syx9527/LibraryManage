@@ -31,8 +31,13 @@ class Main(QMainWindow):
         self.Menu.addAction(self.signInAction)
         self.Menu.addAction(self.quitSignInAction)
         self.Menu.addAction(self.quitAction)
-
-
+        self.signUpAction.setEnabled(True)
+        self.changePasswordAction.setEnabled(True)
+        self.signInAction.setEnabled(False)
+        self.quitSignInAction.setEnabled(False)
+        self.widget.is_admin_signal.connect(self.adminSignIn)
+        self.widget.is_student_signal[str].connect(self.studentSignIn)
+        self.Menu.triggered[QAction].connect(self.menuTriggered)
 
     def adminSignIn(self):
         sip.delete(self.widget)
