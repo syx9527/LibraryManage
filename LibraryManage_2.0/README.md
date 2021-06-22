@@ -60,4 +60,4 @@
 
 2. 生成的文件位于项目文件夹`dist`下。
 
-## 项目已同步至github仓库<a href='https://github.com/syx9527/LibraryManage'>LibraryManage</a>
+## 项目已同步至github仓库<a href='https://github.com/syx9527/LibraryManage/tree/main/LibraryManage_2.0'>LibraryManage_2.0</a>
