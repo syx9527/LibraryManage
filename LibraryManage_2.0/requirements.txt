@@ -22,6 +22,6 @@ toml==0.10.2
 urllib3==1.26.4
 wincertstore==0.2
 yarg==0.1.9
-pyinstaller==4.3
+pyinstaller
 pywin32==300
 setuptools==44.0.0
