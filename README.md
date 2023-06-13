@@ -1,4 +1,4 @@
-# 图书馆管理系统(python3，PyQt5，MySQL)
+# 图书馆管理系统(python3.7，PyQt5，MySQL8)
 
 [TOC]
 
@@ -51,6 +51,8 @@
    `pip install -r requirements.txt`
 
 2. 运行`MainWindow.py`启动项目
+
+管理员账号：123/123456
 
 ## 3.打包项目
 

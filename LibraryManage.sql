@@ -1,5 +1,17 @@
 /*
-librarymanage
+ Navicat Premium Data Transfer
+
+ Source Server         : localhost
+ Source Server Type    : MySQL
+ Source Server Version : 80028 (8.0.28)
+ Source Host           : 127.0.0.1:3306
+ Source Schema         : ll
+
+ Target Server Type    : MySQL
+ Target Server Version : 80028 (8.0.28)
+ File Encoding         : 65001
+
+ Date: 13/06/2023 12:57:28
 */
 
 SET NAMES utf8mb4;
@@ -137,15 +149,15 @@ CREATE TABLE `user`  (
   `IsAdmin` int NULL DEFAULT 0,
   `TimesBorrowed` int NULL DEFAULT 0,
   `NumBorrowed` int NULL DEFAULT 0,
-  UNIQUE INDEX `StudentId`(`StudentId`) USING BTREE
+  UNIQUE INDEX `StudentId`(`StudentId` ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('123', 'liuyan', '202cb962ac59075b964b07152d234b70', 1, 0, 0);
-INSERT INTO `user` VALUES ('1234', '1234', '81dc9bdb52d04dc20036dbd8313ed055', 0, 2, 1);
-INSERT INTO `user` VALUES ('201711107119', '小邵', '52569c045dc348f12dfc4c85000ad832', 1, 0, 0);
+INSERT INTO `user` VALUES ('123', '123', 'e10adc3949ba59abbe56e057f20f883e', 1, 0, 0);
+INSERT INTO `user` VALUES ('1234', '1234', 'e10adc3949ba59abbe56e057f20f883e', 0, 2, 1);
+INSERT INTO `user` VALUES ('12345', '12345', 'e10adc3949ba59abbe56e057f20f883e', 1, 0, 0);
 
 -- ----------------------------
 -- Table structure for user_book

@@ -66,4 +66,4 @@ def exec_(sql):
 def main():
     sql = "select * from student"  # mysql查询语句
     res = query(sql)
-    print(res)
+    # print(res)

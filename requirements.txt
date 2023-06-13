@@ -17,11 +17,11 @@ PyQt5-sip==4.19.19
 QDarkStyle==3.0.2
 QtPy==1.9.0
 requests==2.25.1
-sip==6.0.3
+sip
 toml==0.10.2
 urllib3==1.26.4
 wincertstore==0.2
 yarg==0.1.9
 pyinstaller
 pywin32==300
-setuptools==44.0.0
+setuptools
